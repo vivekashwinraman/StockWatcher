@@ -50,17 +50,21 @@ public class StockListAdapter extends RecyclerView.Adapter<StockListAdapter.View
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView stockCode;
         public TextView stockName;
         public TextView stockValue;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            stockCode = (TextView)itemLayoutView.findViewById(R.id.stockCode);
+            stockCode = (TextView) itemLayoutView.findViewById(R.id.stockCode);
             stockName = (TextView) itemLayoutView.findViewById(R.id.stockName);
-            stockValue = (TextView)itemLayoutView.findViewById(R.id.stockValue);
+            stockValue = (TextView) itemLayoutView.findViewById(R.id.stockValue);
+            itemLayoutView.setOnClickListener(this);
+        }
 
+        @Override
+        public void onClick(View view) {
         }
     }
 }
