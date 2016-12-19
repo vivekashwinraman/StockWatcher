@@ -1,6 +1,7 @@
 package stock.com.stockwatcher.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import stock.com.stockwatcher.R;
+import stock.com.stockwatcher.activities.StockDetailActivity;
 import stock.com.stockwatcher.modelobjects.StockObject;
 
 /**
@@ -65,6 +67,8 @@ public class StockListAdapter extends RecyclerView.Adapter<StockListAdapter.View
 
         @Override
         public void onClick(View view) {
+            Intent intent = new Intent(context, StockDetailActivity.class);
+            context.startActivity(intent);
         }
     }
 }
